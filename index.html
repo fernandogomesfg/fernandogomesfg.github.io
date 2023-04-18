@@ -226,7 +226,9 @@
 
         <div class="section-title">
           <h2>Serviços</h2>
-          <p>Na seção abaixo, você encontrará uma lista detalhada dos serviços que ofereço. Com habilidades em diversas áreas, incluindo desenvolvimento de websites, cartografia e geoprocessamento, estou confiante de que posso oferecer soluções personalizadas para atender às suas necessidades específicas.</p>
+          <p>Na seção abaixo, você encontrará uma lista detalhada dos serviços que ofereço. Com habilidades em diversas
+            áreas, incluindo desenvolvimento de websites, cartografia e geoprocessamento, estou confiante de que posso
+            oferecer soluções personalizadas para atender às suas necessidades específicas.</p>
         </div>
 
         <div class="row">
@@ -242,7 +244,8 @@
                 <i class="bx bx-laptop"></i>
               </div>
               <h4><a href="">Desenvolvimento Web/WebGIS</a></h4>
-              <p>Utilizo tecnologias como HTML, CSS, JavaScript e Leaflet para criar soluções web interativas e visualmente atraentes</p>
+              <p>Utilizo tecnologias como HTML, CSS, JavaScript e Leaflet para criar soluções web interativas e
+                visualmente atraentes</p>
             </div>
           </div>
 
@@ -258,7 +261,8 @@
                 <i class="bx bx-line-chart"></i>
               </div>
               <h4><a href="">Coleta e Análise de Dados Geoespaciais</a></h4>
-              <p>Utilizo tecnologias de ponta, como GPS e imagens satélites para coletar dados precisos e confiáveis para criar personalizadas</p>
+              <p>Utilizo tecnologias de ponta, como GPS e imagens satélites para coletar dados precisos e confiáveis
+                para criar personalizadas</p>
             </div>
           </div>
 
@@ -274,7 +278,8 @@
                 <i class="bx bx-map"></i>
               </div>
               <h4><a href="">Cartografia</a></h4>
-              <p>Utilizo ferramentas de Cartografia, como o QGIS para criar mapas precisos e visualmente atraentes que ajudam os clientes a tomar decisões informadas</p>
+              <p>Utilizo ferramentas de Cartografia, como o QGIS para criar mapas precisos e visualmente atraentes que
+                ajudam os clientes a tomar decisões informadas</p>
             </div>
           </div>
 
@@ -289,7 +294,8 @@
                 <i class="bx bx-mobile"></i>
               </div>
               <h4><a href="">Desenvolvimento de Aplicativos</a></h4>
-              <p>Criar soluções digitais que permitam aos usuários realizar cálculos geodésicos complexos com precisão.</p>
+              <p>Criar soluções digitais que permitam aos usuários realizar cálculos geodésicos complexos com precisão.
+              </p>
             </div>
           </div>
 
@@ -304,7 +310,8 @@
                 <i class="bx bx-data"></i>
               </div>
               <h4><a href="">Criação de Base de Dados Geográficos</a></h4>
-              <p>Criar um modelo de dados que permita armazenar informações geográficas de forma eficiente e precisa. </p>
+              <p>Criar um modelo de dados que permita armazenar informações geográficas de forma eficiente e precisa.
+              </p>
             </div>
           </div>
 
@@ -319,7 +326,8 @@
                 <i class="bx bx-pencil"></i>
               </div>
               <h4><a href="">Ensino de Geotecnologias</a></h4>
-              <p>Ensinar como utilizar as ferramentas e técnicas de SIG para coletar, analisar e visualizar informações geográficas</p>
+              <p>Ensinar como utilizar as ferramentas e técnicas de SIG para coletar, analisar e visualizar informações
+                geográficas</p>
             </div>
           </div>
 
@@ -367,11 +375,11 @@
             <form id="meuForm" action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-12 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+                  <input id="nome" type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+                <textarea id="mensagem" class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
               </div>
               <div class="text-center"><button onclick="generateLink()" type="submit">Enviar</button></div>
             </form>
@@ -435,15 +443,18 @@
 
   <script>
     //WHATSAPP
-    const meuForm = document.querySelector('#meuForm');
+    function generateLink() {
+      const meuForm = document.querySelector('#meuForm');
 
-    meuForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      let nome = document.getElementById('nome').value;
-      let msg = document.getElementById('mensagem').value;
-      let api_whats = `https://wa.me/+258840357939?text=Oi+meu+nome+é+${nome}+. ${msg}`;
-      window.open(api_whats, "_blank");
-    });       
+      meuForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let nome = document.getElementById('nome').value;
+        let msg = document.getElementById('mensagem').value;
+        let api_whats = `https://wa.me/+258840357939?text=Oi+meu+nome+é+${nome}! Vim pelo seu porfolio!!! ${msg}`;
+        window.open(api_whats, "_blank");
+      });
+    }
+
   </script>
 
 </body>
